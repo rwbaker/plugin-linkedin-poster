@@ -1,22 +1,24 @@
 const manifest = {
-  name: '@sgnl/plugin-linkedin-poster',
-  displayName: 'LinkedIn Poster',
+  id: 'linkedin-poster',
+  apiVersion: 1 as const,
   version: '0.1.0',
+  displayName: 'LinkedIn Poster',
   description: 'Automated LinkedIn posting from a content calendar with image support',
-
-  entrypoints: {
-    worker: 'dist/worker.js',
-  },
+  author: 'SGNL Studio',
+  categories: ['automation'] as const,
 
   capabilities: [
     'jobs.schedule',
     'plugin.state.read',
     'plugin.state.write',
     'http.outbound',
-    'secrets.read-ref',
-  ],
+  ] as const,
 
-  configSchema: {
+  entrypoints: {
+    worker: 'dist/worker.js',
+  },
+
+  instanceConfigSchema: {
     type: 'object',
     properties: {
       linkedinAccessToken: {
@@ -28,21 +30,16 @@ const manifest = {
         type: 'string',
         title: 'LinkedIn Person URN',
         description: 'Format: urn:li:person:XXXXXX',
-        pattern: '^urn:li:(person|organization):.+$',
       },
       postingWindowStartHour: {
         type: 'number',
         title: 'Posting window start (hour, ET)',
         default: 8,
-        minimum: 0,
-        maximum: 23,
       },
       postingWindowEndHour: {
         type: 'number',
         title: 'Posting window end (hour, ET)',
         default: 17,
-        minimum: 0,
-        maximum: 23,
       },
       dryRun: {
         type: 'boolean',
@@ -51,17 +48,16 @@ const manifest = {
         default: false,
       },
     },
-    required: ['linkedinAccessToken', 'linkedinPersonUrn'],
   },
 
   jobs: [
     {
       jobKey: 'daily-post',
       displayName: 'Daily LinkedIn Post',
-      description: 'Posts scheduled content from the calendar. Runs daily at 8am ET.',
+      description: 'Posts scheduled content from the calendar at a random time in the posting window',
       schedule: '0 12 * * *',
     },
   ],
-} as const;
+};
 
 export default manifest;

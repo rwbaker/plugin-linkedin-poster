@@ -2,21 +2,23 @@ import { createRequire } from 'module'; const require = createRequire(import.met
 
 // src/manifest.ts
 var manifest = {
-  name: "@sgnl/plugin-linkedin-poster",
-  displayName: "LinkedIn Poster",
+  id: "linkedin-poster",
+  apiVersion: 1,
   version: "0.1.0",
+  displayName: "LinkedIn Poster",
   description: "Automated LinkedIn posting from a content calendar with image support",
-  entrypoints: {
-    worker: "dist/worker.js"
-  },
+  author: "SGNL Studio",
+  categories: ["automation"],
   capabilities: [
     "jobs.schedule",
     "plugin.state.read",
     "plugin.state.write",
-    "http.outbound",
-    "secrets.read-ref"
+    "http.outbound"
   ],
-  configSchema: {
+  entrypoints: {
+    worker: "dist/worker.js"
+  },
+  instanceConfigSchema: {
     type: "object",
     properties: {
       linkedinAccessToken: {
@@ -27,22 +29,17 @@ var manifest = {
       linkedinPersonUrn: {
         type: "string",
         title: "LinkedIn Person URN",
-        description: "Format: urn:li:person:XXXXXX",
-        pattern: "^urn:li:(person|organization):.+$"
+        description: "Format: urn:li:person:XXXXXX"
       },
       postingWindowStartHour: {
         type: "number",
         title: "Posting window start (hour, ET)",
-        default: 8,
-        minimum: 0,
-        maximum: 23
+        default: 8
       },
       postingWindowEndHour: {
         type: "number",
         title: "Posting window end (hour, ET)",
-        default: 17,
-        minimum: 0,
-        maximum: 23
+        default: 17
       },
       dryRun: {
         type: "boolean",
@@ -50,14 +47,13 @@ var manifest = {
         description: "Log what would be posted without actually posting",
         default: false
       }
-    },
-    required: ["linkedinAccessToken", "linkedinPersonUrn"]
+    }
   },
   jobs: [
     {
       jobKey: "daily-post",
       displayName: "Daily LinkedIn Post",
-      description: "Posts scheduled content from the calendar. Runs daily at 8am ET.",
+      description: "Posts scheduled content from the calendar at a random time in the posting window",
       schedule: "0 12 * * *"
     }
   ]
