@@ -1,5 +1,5 @@
 {
-  "name": "@sgnl/plugin-linkedin-poster",
+  "name": "plugin-linkedin-poster",
   "version": "0.1.0",
   "description": "Paperclip plugin for automated LinkedIn posting with content calendar and image support",
   "type": "module",
