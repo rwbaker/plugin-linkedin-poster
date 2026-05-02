@@ -15,7 +15,7 @@ const manifest = {
   ] as const,
 
   entrypoints: {
-    worker: 'dist/worker.js',
+    worker: 'dist/worker.mjs',
   },
 
   instanceConfigSchema: {

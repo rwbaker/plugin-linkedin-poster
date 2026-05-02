@@ -3,7 +3,10 @@
   "version": "0.1.0",
   "description": "Paperclip plugin for automated LinkedIn posting with content calendar and image support",
   "type": "module",
-  "main": "dist/worker.js",
+  "main": "dist/worker.mjs",
+  "paperclipPlugin": {
+    "manifest": "dist/manifest.mjs"
+  },
   "scripts": {
     "build": "node build.mjs",
     "prepare": "node build.mjs",
@@ -14,7 +17,7 @@
     "@paperclipai/plugin-sdk": ">=2026.416.0"
   },
   "devDependencies": {
-    "esbuild": "^0.25.0",
+    "esbuild": "^0.25.12",
     "typescript": "^5.7.0"
   }
 }

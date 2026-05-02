@@ -7,6 +7,7 @@ await esbuild.build({
   target: 'node20',
   format: 'esm',
   outdir: 'dist',
+  outExtension: { '.js': '.mjs' },
   sourcemap: true,
   external: ['@paperclipai/plugin-sdk', '@paperclipai/plugin-sdk/*'],
   banner: { js: "import { createRequire } from 'module'; const require = createRequire(import.meta.url);" },
