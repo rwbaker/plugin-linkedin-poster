@@ -1,0 +1,173 @@
+{
+  "meta": {
+    "author": "SGNL Studio",
+    "description": "8-week LinkedIn content calendar for Memorie",
+    "createdAt": "2026-05-01",
+    "source": "SGN-20#document-linkedin-posts"
+  },
+  "posts": [
+    {
+      "id": "week1-tue",
+      "week": 1,
+      "scheduledDate": "2026-05-05",
+      "pillar": "Product in the Wild",
+      "text": "Most people have 30 or more unread notes in their phone that they will never look at again. Screenshots of recipes, addresses texted by a friend, a medication name from a doctor's appointment. The information is there, but it is buried under everything else, and finding it takes longer than it should.\n\nMemorie works differently. You text it a note, and it organizes the information around the people, places, and events in your life. When you need it back, you ask for it in plain language, and it answers. No scrolling, no searching through folders. You text, it remembers.\n\n#productivity #AIassistant #SMS",
+      "imageGuidance": "Clean phone mockup showing a simple text exchange with Memorie. Keep it minimal.",
+      "status": "scheduled",
+      "imagePath": "images/week1-tue.png"
+    },
+    {
+      "id": "week1-thu",
+      "week": 1,
+      "scheduledDate": "2026-05-08",
+      "pillar": "Building in Public",
+      "text": "We get asked a lot why Memorie is SMS-based instead of an app. The honest answer is that we tried the app route first and it did not work the way we wanted.\n\nApps require a download, an account, and a new habit. SMS requires nothing. Everyone already knows how to send a text, and nobody has to learn a new interface to use Memorie. The tradeoff is that we give up a lot of design control. We cannot build onboarding flows or nudge users with push notifications. We have to earn attention with every single message.\n\nThat constraint turned out to be the best product decision we made. When your only interface is a text thread, every interaction has to be useful or people stop responding. It keeps us honest.\n\n#buildinpublic #startuplife",
+      "imageGuidance": "None needed. Text-only posts perform well for \"building in public\" content.",
+      "status": "scheduled"
+    },
+    {
+      "id": "week1-sat",
+      "week": 1,
+      "scheduledDate": "2026-05-10",
+      "pillar": "The Problem We Solve",
+      "text": "The average person uses between four and five different apps to manage their personal information. Notes in one place, reminders in another, contacts somewhere else, and a group chat thread that serves as a shared brain for the whole family.\n\nThe tools keep multiplying but the problem stays the same: you have to remember where you put the thing that was supposed to help you remember. Every new app adds another place to check, another login to manage, another inbox that slowly fills up with things you meant to come back to.\n\nThe issue was never a lack of tools. It was that the tools themselves became part of the problem.\n\n#mentalload #productivity",
+      "imageGuidance": "Simple stat graphic: \"4.8 apps. One brain. Something has to give.\"",
+      "status": "scheduled",
+      "imagePath": "images/week1-sat.png"
+    },
+    {
+      "id": "week2-tue",
+      "week": 2,
+      "scheduledDate": "2026-05-12",
+      "pillar": "Product in the Wild",
+      "text": "A caregiver texted Memorie: \"Dad takes metformin 500mg twice a day with food, and lisinopril 10mg in the morning. His next cardiology appointment is June 12 at 2pm with Dr. Patel.\"\n\nTwo weeks later, she texted: \"When is Dad's cardiology appointment?\" Memorie answered with the date, time, and doctor's name. She did not have to dig through old texts or check a calendar she forgot to update.\n\nCaregiving comes with an enormous amount of information that changes constantly. Memorie holds onto it so you can focus on the person, not the logistics.\n\n#caregiving #AIassistant",
+      "imageGuidance": "Warm, simple illustration or photo related to caregiving. Avoid anything clinical.",
+      "status": "scheduled",
+      "imagePath": "images/week2-tue.png"
+    },
+    {
+      "id": "week2-thu",
+      "week": 2,
+      "scheduledDate": "2026-05-15",
+      "pillar": "Team and Culture",
+      "text": "Every week our team does something we call a memory audit. Each person shares something they forgot that week and how it played out.\n\nLast week, someone forgot a dentist appointment and only realized when the office called to reschedule. Another person blanked on the name of someone they met at a dinner party three days earlier. Someone else missed a friend's birthday by a full week.\n\nNone of these are catastrophic, but they all carry a small cost. A moment of embarrassment, a missed connection, a thing that needed to be rescheduled. We are building Memorie because we live this problem every day, and we got tired of telling ourselves we would do better next time.\n\n#teamculture #startuplife",
+      "imageGuidance": "Candid team photo if available. Otherwise skip the image.",
+      "status": "scheduled"
+    },
+    {
+      "id": "week3-tue",
+      "week": 3,
+      "scheduledDate": "2026-05-19",
+      "pillar": "The Problem We Solve",
+      "text": "There is a specific kind of confidence that comes with saying \"I will remember this.\" It almost always turns out to be misplaced.\n\nYou meet someone at an event and they mention their kid plays travel soccer. You make a mental note because you coach a team in the same league. Three weeks later, you run into them again and the detail is gone. You know you had something in common but you cannot recall what it was.\n\nThe gap between \"I will remember this\" and actually remembering it is where relationships lose momentum. Not because people do not care, but because human memory was not designed for the volume of information modern life generates.\n\n#networking #relationships",
+      "imageGuidance": "None needed.",
+      "status": "scheduled"
+    },
+    {
+      "id": "week3-thu",
+      "week": 3,
+      "scheduledDate": "2026-05-22",
+      "pillar": "Product in the Wild",
+      "text": "After a conference last month, a user texted Memorie twelve times in two hours. Each message was a quick note about someone they had met: name, company, what they talked about, whether they should follow up.\n\nA week later, they texted: \"Who did I meet at the conference who works in healthcare?\" Memorie pulled up three names with the context from each conversation.\n\nThat is not something a notes app can do well. Notes apps store text. Memorie understands that a person, an event, and a topic are connected, and it retrieves them that way.\n\n#networking #AIassistant #conferences",
+      "imageGuidance": "Phone mockup showing a quick note like \"Met Sarah Chen from Altura Health, talked about patient engagement. Follow up next week.\"",
+      "status": "scheduled",
+      "imagePath": "images/week3-thu.png"
+    },
+    {
+      "id": "week4-tue",
+      "week": 4,
+      "scheduledDate": "2026-05-26",
+      "pillar": "Building in Public",
+      "text": "Early on, we built a feature that let users create categories for their notes. You could label things as \"work,\" \"personal,\" \"health,\" whatever you wanted. It took two engineers about two weeks to build, and we were proud of how clean it turned out.\n\nThen we looked at the data. Almost nobody used it. The people who did created categories once and never updated them. Most users were texting Memorie because they did not want to organize things. They wanted someone else to handle that part.\n\nWe removed the feature entirely and put that energy into making the automatic organization smarter. Usage went up. Sometimes the best product work is figuring out what to take away.\n\n#buildinpublic #productdevelopment",
+      "imageGuidance": "None needed.",
+      "status": "scheduled"
+    },
+    {
+      "id": "week4-thu",
+      "week": 4,
+      "scheduledDate": "2026-05-29",
+      "pillar": "Product in the Wild",
+      "text": "A parent texted Memorie at the start of the school year with a list: the teacher's name, the classroom number, early dismissal days, the name of the kid's best friend (and the friend's parent's name), and a note that peanut allergies are present in the classroom.\n\nOver the next three months, they texted questions like \"What is the teacher's name again?\" and \"Which days does school end early?\" and \"What is the name of Jake's friend's mom?\"\n\nNobody remembers all of this. The information comes at you in a rush during the first week and then you need it in scattered moments for the rest of the year. Memorie holds the full picture so you can pull out the one piece you need, when you need it.\n\n#parenting #backtoschool #productivity",
+      "imageGuidance": "Simple, warm illustration of a school/parent context. Nothing cartoonish.",
+      "status": "scheduled",
+      "imagePath": "images/week4-thu.png"
+    },
+    {
+      "id": "week5-tue",
+      "week": 5,
+      "scheduledDate": "2026-06-02",
+      "pillar": "The Problem We Solve",
+      "text": "Note-taking apps have a shelf life. Most people start strong: they organize folders, tag entries, and feel productive for about two weeks. Then the maintenance becomes its own task. Notes pile up, folders get messy, and the app becomes another place where information goes to sit quietly forever.\n\nThe problem is that note-taking apps treat capturing information and organizing it as the same workflow, handled by the same person. But those are two different jobs. Capturing should be instant and effortless. Organizing should happen in the background, without your involvement.\n\nWhen those two jobs are separated, notes stop becoming a graveyard and start becoming a resource you can rely on.\n\n#productivity #notetaking",
+      "imageGuidance": "Stat graphic: \"The average note-taking app user stops organizing after 14 days.\"",
+      "status": "scheduled",
+      "imagePath": "images/week5-tue.png"
+    },
+    {
+      "id": "week5-thu",
+      "week": 5,
+      "scheduledDate": "2026-06-05",
+      "pillar": "Building in Public",
+      "text": "One of the harder technical problems we have solved is time zones in reminders. It sounds straightforward until you realize how many edge cases exist.\n\nA user in New York texts \"remind me to call Mom at 9am her time\" and mentions that Mom lives in Arizona. Arizona does not observe daylight saving time, except for the Navajo Nation, which does. The offset between New York and Arizona changes twice a year, but not on the same dates that most people expect.\n\nWe built a system that resolves these ambiguities by asking a clarifying question only when the answer is genuinely unclear, and handling the rest silently. The goal is for the reminder to arrive at the right time without the user having to think about why time zones are complicated.\n\n#buildinpublic #engineering",
+      "imageGuidance": "None needed.",
+      "status": "scheduled"
+    },
+    {
+      "id": "week6-tue",
+      "week": 6,
+      "scheduledDate": "2026-06-09",
+      "pillar": "Product in the Wild",
+      "text": "In March, a user texted Memorie: \"Sarah mentioned she wants the Le Creuset Dutch oven in the color Flame.\" In April: \"Mom said she needs new garden gloves, the kind with the rubber grip.\" In May: \"Jake said he is into building model trains now.\"\n\nWhen the holidays came around, they texted: \"What gifts should I get for people?\" Memorie returned every gift idea they had logged throughout the year, organized by person.\n\nGift-giving is one of those tasks where the best ideas come at random moments, months before you need them. The hard part is not having ideas. It is holding onto them long enough to act on them.\n\n#giftgiving #AIassistant",
+      "imageGuidance": "Festive but understated. Could work as a seasonal post if timed right.",
+      "status": "scheduled",
+      "imagePath": "images/week6-tue.png"
+    },
+    {
+      "id": "week6-thu",
+      "week": 6,
+      "scheduledDate": "2026-06-12",
+      "pillar": "Team and Culture",
+      "text": "The team has been reading a lot about how memory works in the brain and how digital tools either support or undermine it. A few things that shaped our thinking recently:\n\nDaniel Schacter's work on the seven sins of memory helped us understand that forgetting is not a failure of the brain. It is a feature. The brain forgets to make room for what matters. The problem is that modern life generates far more \"what matters\" than the brain evolved to handle.\n\nThat reframing changed how we think about Memorie. We are not trying to fix human memory. We are trying to give it a reasonable workload.\n\n#cognitivescience #reading #teamculture",
+      "imageGuidance": "None needed.",
+      "status": "scheduled"
+    },
+    {
+      "id": "week7-tue",
+      "week": 7,
+      "scheduledDate": "2026-06-16",
+      "pillar": "Building in Public",
+      "text": "Running a product on SMS comes with infrastructure decisions that most software companies never have to make. Every text message costs money to send and receive. The margins are different from a free app that monetizes through ads or data.\n\nWe chose SMS because the user experience is better, but we had to build the business model around the reality that every interaction has a direct cost. That means we think carefully about which messages Memorie sends proactively (reminders, follow-ups) versus which ones it sends only in response to a user question.\n\nIt also means we have no interest in sending marketing messages or engagement bait through SMS. Every text from Memorie should be something the user is glad they received. If it is not, we failed.\n\n#buildinpublic #startupeconomics",
+      "imageGuidance": "None needed.",
+      "status": "scheduled"
+    },
+    {
+      "id": "week7-thu",
+      "week": 7,
+      "scheduledDate": "2026-06-19",
+      "pillar": "The Problem We Solve",
+      "text": "Think about the last time you needed a piece of information you knew you had saved somewhere. A confirmation number, a recipe, an address someone texted you three months ago.\n\nYou probably checked your email first. Then your messages. Then your notes app. Then maybe a photo you took of something written on paper. The information existed in one of those places, but finding it meant opening four apps and scanning through months of content.\n\nThe cognitive cost of that search is small in isolation but it adds up. Dozens of times a week, you interrupt what you are doing to go find something you already captured. The capture was not the problem. The retrieval was.\n\n#productivity #informationoverload",
+      "imageGuidance": "Simple graphic showing multiple app icons with a search bar across them.",
+      "status": "scheduled",
+      "imagePath": "images/week7-thu.png"
+    },
+    {
+      "id": "week8-tue",
+      "week": 8,
+      "scheduledDate": "2026-06-23",
+      "pillar": "Product in the Wild",
+      "text": "We asked one of our early users what they text Memorie most often. Their answer surprised us.\n\nIt was not reminders or to-do items. It was names. The name of the server at the restaurant they want to go back to. The name of the plumber their neighbor recommended. The name of the book someone mentioned at a dinner party.\n\n\"I meet a lot of people and hear a lot of recommendations,\" they told us. \"I used to lose all of it. Now I text Memorie and ask later. It is like having a second brain that is better at names than I am.\"\n\n#userstory #AIassistant",
+      "imageGuidance": "With user's permission, a photo of them or a quote card with their words.",
+      "status": "scheduled",
+      "imagePath": "images/week8-tue.png"
+    },
+    {
+      "id": "week8-thu",
+      "week": 8,
+      "scheduledDate": "2026-06-26",
+      "pillar": "Team and Culture",
+      "text": "We do not have a five-year roadmap. We have a clear idea of what Memorie should become, and we are building toward it one decision at a time.\n\nRight now, Memorie captures, organizes, and retrieves. It reminds you when something matters. The next step is for Memorie to start acting on your behalf, handling small tasks that follow naturally from the information you have already shared. Not because automation is impressive, but because the line between \"remember this for me\" and \"handle this for me\" is thinner than most people realize.\n\nWe are a small team working on a product we use every day. If that sounds like the kind of problem you want to work on, we are always interested in meeting people who think this way.\n\n#hiring #startupculture #AI",
+      "imageGuidance": "Team photo or a simple \"We're hiring\" graphic if actively recruiting. Otherwise skip.",
+      "status": "scheduled",
+      "imagePath": "images/week8-thu.png"
+    }
+  ]
+}

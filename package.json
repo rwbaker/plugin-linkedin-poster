@@ -1,0 +1,19 @@
+{
+  "name": "@sgnl/plugin-linkedin-poster",
+  "version": "0.1.0",
+  "description": "Paperclip plugin for automated LinkedIn posting with content calendar and image support",
+  "type": "module",
+  "main": "dist/worker.js",
+  "scripts": {
+    "build": "node build.mjs",
+    "typecheck": "tsc --noEmit",
+    "test": "node --test tests/*.test.mjs"
+  },
+  "dependencies": {
+    "@paperclipai/plugin-sdk": "file:/usr/local/lib/node_modules/paperclipai/node_modules/@paperclipai/plugin-sdk"
+  },
+  "devDependencies": {
+    "esbuild": "^0.25.0",
+    "typescript": "^5.7.0"
+  }
+}
