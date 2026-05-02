@@ -6,11 +6,12 @@
   "main": "dist/worker.js",
   "scripts": {
     "build": "node build.mjs",
+    "prepare": "node build.mjs",
     "typecheck": "tsc --noEmit",
     "test": "node --test tests/*.test.mjs"
   },
   "dependencies": {
-    "@paperclipai/plugin-sdk": "file:/usr/local/lib/node_modules/paperclipai/node_modules/@paperclipai/plugin-sdk"
+    "@paperclipai/plugin-sdk": ">=2026.416.0"
   },
   "devDependencies": {
     "esbuild": "^0.25.0",
