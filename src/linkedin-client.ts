@@ -40,8 +40,7 @@ export class LinkedInClient {
   private headers(contentType: string | null = 'application/json'): Record<string, string> {
     const h: Record<string, string> = {
       Authorization: `Bearer ${this.accessToken}`,
-      'X-Restli-Protocol-Version': '2.0.0',
-      'LinkedIn-Version': '202401',
+      'LinkedIn-Version': '202505',
     };
     if (contentType) h['Content-Type'] = contentType;
     return h;
@@ -111,23 +110,21 @@ export class LinkedInClient {
   }
 
   async createPost({ text, imageUrn, visibility = 'PUBLIC' }: CreatePostOptions) {
-    const shareContent: Record<string, unknown> = {
-      shareCommentary: { text },
-      shareMediaCategory: imageUrn ? 'IMAGE' : 'NONE',
+    const body: Record<string, unknown> = {
+      author: this.personUrn,
+      commentary: text,
+      visibility,
+      distribution: { feedDistribution: 'MAIN_FEED' },
+      lifecycleState: 'PUBLISHED',
     };
 
     if (imageUrn) {
-      shareContent.media = [{ status: 'READY', media: imageUrn }];
+      body.content = {
+        media: { id: imageUrn },
+      };
     }
 
-    const body = {
-      author: this.personUrn,
-      lifecycleState: 'PUBLISHED',
-      visibility: { 'com.linkedin.ugc.MemberNetworkVisibility': visibility },
-      specificContent: { 'com.linkedin.ugc.ShareContent': shareContent },
-    };
-
-    const res = await fetch(`${LINKEDIN_API_BASE}/ugcPosts`, {
+    const res = await fetch(`${LINKEDIN_API_BASE}/posts`, {
       method: 'POST',
       headers: this.headers(),
       body: JSON.stringify(body),
@@ -145,7 +142,7 @@ export class LinkedInClient {
   }
 
   async verifyToken() {
-    const res = await fetch(`${LINKEDIN_API_BASE}/me`, {
+    const res = await fetch(`${LINKEDIN_API_BASE}/posts?author=${encodeURIComponent(this.personUrn)}&count=1`, {
       headers: this.headers(null),
     });
     if (!res.ok) {

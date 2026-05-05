@@ -34,8 +34,7 @@ var LinkedInClient = class {
   headers(contentType = "application/json") {
     const h = {
       Authorization: `Bearer ${this.accessToken}`,
-      "X-Restli-Protocol-Version": "2.0.0",
-      "LinkedIn-Version": "202401"
+      "LinkedIn-Version": "202505"
     };
     if (contentType) h["Content-Type"] = contentType;
     return h;
@@ -94,20 +93,19 @@ var LinkedInClient = class {
     return imageUrn;
   }
   async createPost({ text, imageUrn, visibility = "PUBLIC" }) {
-    const shareContent = {
-      shareCommentary: { text },
-      shareMediaCategory: imageUrn ? "IMAGE" : "NONE"
-    };
-    if (imageUrn) {
-      shareContent.media = [{ status: "READY", media: imageUrn }];
-    }
     const body = {
       author: this.personUrn,
-      lifecycleState: "PUBLISHED",
-      visibility: { "com.linkedin.ugc.MemberNetworkVisibility": visibility },
-      specificContent: { "com.linkedin.ugc.ShareContent": shareContent }
+      commentary: text,
+      visibility,
+      distribution: { feedDistribution: "MAIN_FEED" },
+      lifecycleState: "PUBLISHED"
     };
-    const res = await fetch(`${LINKEDIN_API_BASE}/ugcPosts`, {
+    if (imageUrn) {
+      body.content = {
+        media: { id: imageUrn }
+      };
+    }
+    const res = await fetch(`${LINKEDIN_API_BASE}/posts`, {
       method: "POST",
       headers: this.headers(),
       body: JSON.stringify(body)
@@ -121,7 +119,7 @@ var LinkedInClient = class {
     return { postId, status: res.status };
   }
   async verifyToken() {
-    const res = await fetch(`${LINKEDIN_API_BASE}/me`, {
+    const res = await fetch(`${LINKEDIN_API_BASE}/posts?author=${encodeURIComponent(this.personUrn)}&count=1`, {
       headers: this.headers(null)
     });
     if (!res.ok) {
@@ -342,4 +340,4 @@ runWorker(plugin, import.meta.url);
 export {
   worker_default as default
 };
-//# sourceMappingURL=worker.js.map
+//# sourceMappingURL=worker.mjs.map

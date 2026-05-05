@@ -62,4 +62,4 @@ var manifest_default = manifest;
 export {
   manifest_default as default
 };
-//# sourceMappingURL=manifest.js.map
+//# sourceMappingURL=manifest.mjs.map
